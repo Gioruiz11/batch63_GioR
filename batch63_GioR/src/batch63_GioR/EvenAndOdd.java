@@ -10,7 +10,7 @@ public class EvenAndOdd {
 					if(i % 2 == 0) {
 						esum += i;
 						System.out.println(i + " Even number, total: " + esum);
-					} 
+					}  
 					else {
 						osum += i;
 						System.out.println(i + " Odd number, total: " + osum);
