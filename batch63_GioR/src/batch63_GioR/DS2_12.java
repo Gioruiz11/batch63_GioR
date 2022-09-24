@@ -16,6 +16,7 @@ public class DS2_12 {
 			System.out.println("The sum: " + sum);
 			System.out.println("Type 'yes' if you want to repeat, type anything else to"
 					+ " terminate the loop");
+			s.nextLine();
 			cond = s.nextLine();
 		} while(cond.equals("yes"));
 		s.close();
