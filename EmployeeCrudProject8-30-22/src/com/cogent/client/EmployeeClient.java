@@ -16,6 +16,7 @@ public class EmployeeClient {
 		Scanner scanner = new Scanner(System.in);
 		
 		while(true) {
+			try {
 			System.out.println("************************");
 			System.out.println("1. Add new Employee");
 			System.out.println("2. View All Employee");
@@ -59,16 +60,11 @@ public class EmployeeClient {
 				employeeService.viewEmployees();
 				break;
 			case 3:
-				try {
 					System.out.println("Type employee id to find:");
 					long findId = scanner.nextLong();
 					scanner.nextLine();
 					employeeService.findEmployee(findId);
 					break;
-				} catch (InputMismatchException ime) {
-					System.out.println("Type a proper input (integer)");
-				}
-				break;
 			case 4:
 				System.out.println("Type employee id to delete:");
 				long deleteId = scanner.nextLong();
@@ -92,7 +88,10 @@ public class EmployeeClient {
 				break;
 				
 			}
-
+			} catch (Exception e) {
+				scanner.nextLine();
+				System.out.println("input the correct input type");
+			}
 		}
 	}
 }
