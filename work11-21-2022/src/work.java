@@ -16,6 +16,14 @@ public class work {
 		return arr;
 	}
 	
+	public int[] swapNumNoTemp(int a, int b) {
+        a = a + b;
+        b = a - b;
+        a = a - b;
+        int[] arr = {a,b};
+        return arr;
+	}
+	
 	public String evenOrOdd(int num) {
 		if(num % 2 == 0) {
 			return "even";
